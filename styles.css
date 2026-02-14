@@ -233,6 +233,7 @@ h1 {
   inset: -28%;
   background: conic-gradient(from 0deg, rgba(255, 255, 255, 0.45), transparent, rgba(255, 255, 255, 0.45));
   animation: spin 6s linear infinite;
+  z-index: 0;
 }
 
 .hero-mark::after {
@@ -241,15 +242,18 @@ h1 {
   inset: 8px;
   border-radius: 18px;
   background: linear-gradient(150deg, rgba(14, 18, 37, 0.1), rgba(14, 18, 37, 0.4));
+  z-index: 1;
 }
 
 .hero-logo {
   position: relative;
-  z-index: 1;
-  width: 74%;
-  height: 74%;
+  z-index: 2;
+  width: 82%;
+  height: 82%;
   object-fit: contain;
   border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0.35rem;
   filter: drop-shadow(0 0 14px rgba(20, 20, 40, 0.45));
 }
 
@@ -274,13 +278,14 @@ h2 {
 }
 
 .gallery-grid {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 82%;
+  display: flex;
   gap: 0.75rem;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0.2rem;
   padding: 0.1rem 0 0.45rem;
 }
 
@@ -294,6 +299,7 @@ h2 {
 }
 
 .gallery-item {
+  flex: 0 0 82%;
   min-height: 165px;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -352,7 +358,11 @@ h2 {
   }
 
   .gallery-grid {
-    grid-auto-columns: minmax(260px, 30%);
+    padding-bottom: 0.55rem;
+  }
+
+  .gallery-item {
+    flex-basis: 30%;
   }
 }
 
