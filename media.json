@@ -1,0 +1,20 @@
+{
+  "media": [
+    {
+      "type": "image",
+      "src": "assets/photos/set-01.jpg",
+      "alt": "DJ Jpizzle performing live"
+    },
+    {
+      "type": "image",
+      "src": "assets/photos/crowd-01.jpg",
+      "alt": "Crowd at a DJ Jpizzle show"
+    },
+    {
+      "type": "video",
+      "src": "assets/videos/highlight-01.mp4",
+      "poster": "assets/photos/highlight-cover.jpg",
+      "title": "Live set highlight"
+    }
+  ]
+}

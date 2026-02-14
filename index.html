@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DJ Jpizzle website coming soon." />
+    <title>Jpizzle — Under Construction</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card hero">
+        <div class="hero-copy">
+          <p class="tag">DJ Jpizzle</p>
+          <h1>Official Site Under Construction</h1>
+          <p class="message">
+            A home for mixes, event recaps, and booking details is on the way.
+          </p>
+          <div class="status-row" aria-label="Build status">
+            <span class="pill">New mixes soon</span>
+            <span class="pill">2026 bookings open</span>
+          </div>
+        </div>
+        <div class="hero-mark" aria-hidden="true">JP</div>
+      </section>
+
+      <section class="card gallery">
+        <div class="section-head">
+          <h2>Media Gallery</h2>
+          <p class="gallery-note">Photoz & Clips</p>
+        </div>
+        <div id="gallery-grid" class="gallery-grid" aria-label="Photo and video gallery"></div>
+      </section>
+    </main>
+
+    <script>
+      const galleryGrid = document.getElementById("gallery-grid");
+
+      function renderFallback() {
+        galleryGrid.innerHTML = `
+          <div class="gallery-item placeholder">Add file paths in media.json</div>
+          <div class="gallery-item placeholder">Image or video</div>
+          <div class="gallery-item placeholder">Image or video</div>
+          <div class="gallery-item placeholder">Image or video</div>
+        `;
+      }
+
+      fetch("media.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const mediaItems = Array.isArray(data.media) ? data.media : [];
+
+          if (!mediaItems.length) {
+            renderFallback();
+            return;
+          }
+
+          galleryGrid.innerHTML = "";
+
+          mediaItems.forEach((item) => {
+            const wrapper = document.createElement("div");
+            wrapper.className = "gallery-item";
+
+            const badge = document.createElement("span");
+            badge.className = "media-type";
+            badge.textContent = item.type === "video" ? "VIDEO" : "PHOTO";
+
+            if (item.type === "video") {
+              const video = document.createElement("video");
+              video.src = item.src;
+              if (item.poster) video.poster = item.poster;
+              video.controls = true;
+              video.preload = "metadata";
+              video.title = item.title || "DJ Jpizzle video";
+              wrapper.appendChild(video);
+            } else {
+              const image = document.createElement("img");
+              image.src = item.src;
+              image.alt = item.alt || "DJ Jpizzle photo";
+              image.loading = "lazy";
+              wrapper.appendChild(image);
+            }
+
+            wrapper.appendChild(badge);
+
+            galleryGrid.appendChild(wrapper);
+          });
+        })
+        .catch(() => {
+          renderFallback();
+        });
+    </script>
+  </body>
+</html>
