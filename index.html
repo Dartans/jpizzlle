@@ -9,25 +9,39 @@
   </head>
   <body>
     <main class="container">
-      <section class="card hero">
+      <section class="card hero" aria-label="DJ Jpizzle intro card">
         <div class="hero-copy">
-          <p class="tag">DJ Jpizzle</p>
-          <h1>Official Site Under Construction</h1>
-          <p class="message">
-            A home for mixes, event recaps, and booking details is on the way.
-          </p>
+          <p class="tag">DJ Jpizzle • Open Format</p>
+          <h1>Jpizzle</h1>
+          <p class="subtitle">Club Nights • Private Events • Festivals</p>
+          <p class="message">Official site under construction. Fresh mixes, show dates, and booking details are coming soon.</p>
+
           <div class="status-row" aria-label="Build status">
             <span class="pill">New mixes soon</span>
             <span class="pill">2026 bookings open</span>
           </div>
+
+          <div class="meter" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+
+          <div class="actions" aria-label="Quick links">
+            <a class="btn primary" href="mailto:bookings@jpizzle.com">Book Now</a>
+            <a class="btn ghost" href="#gallery">View Gallery</a>
+          </div>
+
+          <p class="scroll-hint">Scroll for media</p>
         </div>
-        <div class="hero-mark" aria-hidden="true">JP</div>
+
+        <div class="hero-mark" aria-hidden="true">
+          <span class="hero-initials">JP</span>
+        </div>
       </section>
 
-      <section class="card gallery">
+      <section id="gallery" class="card gallery">
         <div class="section-head">
           <h2>Media Gallery</h2>
-          <p class="gallery-note">Photoz & Clips</p>
+          <p class="gallery-note">Swipe for photos + videos</p>
         </div>
         <div id="gallery-grid" class="gallery-grid" aria-label="Photo and video gallery"></div>
       </section>
@@ -82,7 +96,6 @@
             }
 
             wrapper.appendChild(badge);
-
             galleryGrid.appendChild(wrapper);
           });
         })
