@@ -2,19 +2,53 @@
   "media": [
     {
       "type": "image",
-      "src": "assets/photos/set-01.jpg",
-      "alt": "DJ Jpizzle performing live"
+      "src": "assets/photos/att.JAe2-AFI8LksmdnuU2h35TzrA4IQKPo7o5N8fICQYIA.jpg",
+      "alt": "DJ Jpizzle gallery photo 1"
     },
     {
       "type": "image",
-      "src": "assets/photos/crowd-01.jpg",
-      "alt": "Crowd at a DJ Jpizzle show"
+      "src": "assets/photos/att.Pzx1p9kZA-eSBqSX2O_aBL_yOkJ2xiOZbrXGN9MqnyY.jpg",
+      "alt": "DJ Jpizzle gallery photo 2"
     },
     {
-      "type": "video",
-      "src": "assets/videos/highlight-01.mp4",
-      "poster": "assets/photos/highlight-cover.jpg",
-      "title": "Live set highlight"
+      "type": "image",
+      "src": "assets/photos/att.QcHa-kCEACOLNHeajffLdZkd3225_neAT6FIp2pMBcs.jpg",
+      "alt": "DJ Jpizzle gallery photo 3"
+    },
+    {
+      "type": "image",
+      "src": "assets/photos/att.SFPNL8l9byO2vVE6nw0ElfPAfONxix38nGoCL5PkvKg.jpg",
+      "alt": "DJ Jpizzle gallery photo 4"
+    },
+    {
+      "type": "image",
+      "src": "assets/photos/att.VHP-iZjYoRqg3mpChTybeDiQEiQLcAFOiH2X6xbw9p0.jpg",
+      "alt": "DJ Jpizzle gallery photo 5"
+    },
+    {
+      "type": "image",
+      "src": "assets/photos/att.YI7gAPKW6Gd54eDmI4kHfkxs7AO1oH9qNjrUFELUChw.jpg",
+      "alt": "DJ Jpizzle gallery photo 6"
+    },
+    {
+      "type": "image",
+      "src": "assets/photos/att.hew3WJavFE8zXb9Bij4rCAo7wiXQ5R9UdO81nxzz73Y.jpg",
+      "alt": "DJ Jpizzle gallery photo 7"
+    },
+    {
+      "type": "image",
+      "src": "assets/photos/att.hz5CynaUocjMrav9v9I-rnnDnNWi1CnMHBK96cecqOo.jpg",
+      "alt": "DJ Jpizzle gallery photo 8"
+    },
+    {
+      "type": "image",
+      "src": "assets/photos/att.jyDwaK6AjtaH-KOsqtp8IByKcvI_5DenP47h6IpPTPM.jpg",
+      "alt": "DJ Jpizzle gallery photo 9"
+    },
+    {
+      "type": "image",
+      "src": "assets/photos/jandm.png",
+      "alt": "DJ Jpizzle gallery photo 10"
     }
   ]
 }

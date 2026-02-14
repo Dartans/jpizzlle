@@ -240,17 +240,17 @@ h1 {
   position: absolute;
   inset: 8px;
   border-radius: 18px;
-  background: linear-gradient(150deg, rgba(14, 18, 37, 0.25), rgba(14, 18, 37, 0.62));
+  background: linear-gradient(150deg, rgba(14, 18, 37, 0.1), rgba(14, 18, 37, 0.4));
 }
 
-.hero-initials {
+.hero-logo {
   position: relative;
   z-index: 1;
-  font-weight: 800;
-  font-size: clamp(2.15rem, 8vw, 3.35rem);
-  letter-spacing: 0.06em;
-  color: #fff;
-  text-shadow: 0 0 24px rgba(195, 90, 255, 0.35);
+  width: 74%;
+  height: 74%;
+  object-fit: contain;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 14px rgba(20, 20, 40, 0.45));
 }
 
 h2 {
